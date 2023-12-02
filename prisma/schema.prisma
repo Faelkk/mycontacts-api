@@ -20,5 +20,5 @@ model Contacts {
     email String @unique
     phone String
 
-    categories Categories @relation(fields: [id], references: [id])
+    categories Categories @relation(fields: [id], references: [id], onDelete: Cascade)
 }
