@@ -6,10 +6,8 @@ import { Prisma } from '@prisma/client';
 export class ContactsRepository {
   constructor(private readonly prismaService: PrismaService) {}
 
-  findMany<T extends Prisma.ContactsFindManyArgs>(
-    findManyDto: Prisma.SelectSubset<T, Prisma.ContactsFindManyArgs>,
-  ) {
-    return this.prismaService.contacts.findMany(findManyDto);
+  findMany() {
+    return this.prismaService.contacts.findMany();
   }
 
   findFirst(findFirstDto: Prisma.ContactsFindFirstArgs) {

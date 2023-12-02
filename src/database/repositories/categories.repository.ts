@@ -15,7 +15,6 @@ export class CategoriesRepository {
   }
 
   create(createDto: Prisma.CategoriesCreateArgs) {
-    console.log(createDto);
     return this.prismaService.categories.create(createDto);
   }
   delete(deleteDto: Prisma.CategoriesDeleteArgs) {
