@@ -4,7 +4,7 @@ import { AppService } from './app.service';
 import { ConnectModule } from './connect/connect.module';
 import { CategoriesModule } from './modules/categories/categories.module';
 import { ContactsModule } from './modules/contacts/contacts.module';
-import { DatabaseModule } from './database/database.module';
+import { DatabaseModule } from './shared/database/database.module';
 
 @Module({
   imports: [ConnectModule, CategoriesModule, ContactsModule, DatabaseModule],

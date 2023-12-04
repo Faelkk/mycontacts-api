@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { CreateContactDto } from './dto/create-contact.dto';
 import { UpdateContactDto } from './dto/update-contact.dto';
-import { ContactsRepository } from 'src/database/repositories/contatcts.repository';
+import { ContactsRepository } from '../../shared/database/repositories/contatcts.repository';
 
 @Injectable()
 export class ContactsService {
