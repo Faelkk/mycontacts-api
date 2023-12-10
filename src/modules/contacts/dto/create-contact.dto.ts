@@ -15,4 +15,8 @@ export class CreateContactDto {
   @IsString()
   @IsNotEmpty()
   phone: string;
+
+  @IsString()
+  @IsNotEmpty()
+  order: string;
 }

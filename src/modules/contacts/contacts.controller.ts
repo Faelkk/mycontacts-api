@@ -6,6 +6,7 @@ import {
   Param,
   Delete,
   Put,
+  Query,
 } from '@nestjs/common';
 import { ContactsService } from './contacts.service';
 import { CreateContactDto } from './dto/create-contact.dto';
@@ -21,7 +22,7 @@ export class ContactsController {
   }
 
   @Get()
-  findAll() {
+  findAll(@Query('order') order: string) {
     return this.contactsService.findAll();
   }
 
