@@ -22,8 +22,8 @@ export class ContactsController {
   }
 
   @Get()
-  findAll(@Query('order') order: string) {
-    return this.contactsService.findAll();
+  findAll(@Query('sortOrder') sortOrder: 'asc' | 'desc' = 'asc') {
+    return this.contactsService.findAll(sortOrder);
   }
 
   @Get(':id')

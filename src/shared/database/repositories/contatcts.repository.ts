@@ -6,8 +6,10 @@ import { Prisma } from '@prisma/client';
 export class ContactsRepository {
   constructor(private readonly prismaService: PrismaService) {}
 
-  findMany() {
-    return this.prismaService.contacts.findMany();
+  findMany(queryOptions: { orderBy?: { name: 'asc' | 'desc' } } = {}) {
+    return this.prismaService.contacts.findMany({
+      ...queryOptions,
+    });
   }
 
   findFirst(findFirstDto: Prisma.ContactsFindFirstArgs) {

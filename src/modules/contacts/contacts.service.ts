@@ -11,10 +11,9 @@ export class ContactsService {
     return this.contactsRepo.create({ data: createContactDto });
   }
 
-  findAll() {
-    return this.contactsRepo.findMany();
+  findAll(sortOrder: 'asc' | 'desc' = 'asc') {
+    return this.contactsRepo.findMany({ orderBy: { name: sortOrder } });
   }
-
   findOne(id: string) {
     return this.contactsRepo.findFirst({ where: { id: id } });
   }
