@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { ConflictException, Injectable } from '@nestjs/common';
 import { CreateCategoryDto } from './dto/create-category.dto';
 import { UpdateCategoryDto } from './dto/update-category.dto';
 import { CategoriesRepository } from '../../shared/database/repositories/categories.repository';
@@ -7,7 +7,17 @@ import { CategoriesRepository } from '../../shared/database/repositories/categor
 export class CategoriesService {
   constructor(private readonly categoriesRepo: CategoriesRepository) {}
 
-  create(createCategoryDto: CreateCategoryDto) {
+  async create(createCategoryDto: CreateCategoryDto) {
+    const { name } = createCategoryDto;
+    const categoryTaken = await this.categoriesRepo.findFirst({
+      where: { name },
+      select: { id: true },
+    });
+
+    if (categoryTaken) {
+      throw new ConflictException('This category already exists');
+    }
+
     return this.categoriesRepo.create({ data: createCategoryDto });
   }
 
