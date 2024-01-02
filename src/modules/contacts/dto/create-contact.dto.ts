@@ -12,4 +12,8 @@ export class CreateContactDto {
   @IsString()
   @IsNotEmpty()
   phone: string;
+
+  @IsString()
+  @IsNotEmpty()
+  categoryId: string;
 }

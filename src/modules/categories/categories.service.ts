@@ -35,7 +35,7 @@ export class CategoriesService {
             name: true,
             email: true,
             phone: true,
-            categories: true,
+            category: true,
           },
         },
       },

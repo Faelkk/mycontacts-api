@@ -7,22 +7,22 @@ export class ContactsRepository {
   constructor(private readonly prismaService: PrismaService) {}
 
   findMany(queryOptions: { orderBy?: { name: 'asc' | 'desc' } } = {}) {
-    return this.prismaService.contacts.findMany({
+    return this.prismaService.contact.findMany({
       ...queryOptions,
     });
   }
 
-  findFirst(findFirstDto: Prisma.ContactsFindFirstArgs) {
-    return this.prismaService.contacts.findFirst(findFirstDto);
+  findFirst(findFirstDto: Prisma.ContactFindFirstArgs) {
+    return this.prismaService.contact.findFirst(findFirstDto);
   }
 
-  create(createDto: Prisma.ContactsCreateArgs) {
-    return this.prismaService.contacts.create(createDto);
+  create(createDto: Prisma.ContactCreateArgs) {
+    return this.prismaService.contact.create(createDto);
   }
-  delete(deleteDto: Prisma.ContactsDeleteArgs) {
-    return this.prismaService.contacts.delete(deleteDto);
+  delete(deleteDto: Prisma.ContactDeleteArgs) {
+    return this.prismaService.contact.delete(deleteDto);
   }
-  update(updateDto: Prisma.ContactsUpdateArgs) {
-    return this.prismaService.contacts.update(updateDto);
+  update(updateDto: Prisma.ContactUpdateArgs) {
+    return this.prismaService.contact.update(updateDto);
   }
 }

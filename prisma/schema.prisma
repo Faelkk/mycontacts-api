@@ -7,18 +7,20 @@ datasource db {
     url      = env("DATABASE_URL")
 }
 
-model Categories {
+model Category {
     id   String @id @default(auto()) @map("_id") @db.ObjectId
     name String
 
-    Contacts Contacts[]
+    Contacts Contact[]
 }
 
-model Contacts {
+model Contact {
     id    String @id @default(auto()) @map("_id") @db.ObjectId
     name  String
     email String @unique
     phone String
 
-    categories Categories @relation(fields: [id], references: [id], onDelete: Cascade)
+    categoryId String @map("category_id") @db.ObjectId
+
+    category Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
 }
