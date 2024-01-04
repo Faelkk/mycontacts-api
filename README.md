@@ -1,73 +1,63 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# My-Contacts API
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Esse projeto foi desenvolvido durante curso JStack, com o objetivo de oferecer um eficiente gerenciamento de contatos. Com esta aplicação, os usuários podem cadastrar, editar e excluir contatos e categorias de forma simples e intuitiva. Além disso, integra-se perfeitamente à aplicação de gerenciamento de contatos My-contacts fe, proporcionando uma experiência aprimorada para o usuário no controle de seus contatos. Simplifique a administração dos seus contatos com esta aplicação sólida.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Documentação
 
-## Description
+A documentação dessa API é feita automaticamente pela lib Swagger, proporcionando facilidade na compreensão e utilização da API. Isso ajuda em uma integração simples e intuitiva para os devs.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Sinta à vontade para explorar a documentação e tirar proveito dos recursos disponibilizados por esta API para impulsionar seus projetos financeiros. Me dediquei ao maximo para conseguir oferecer uma boa experiência para os usuarios dessa api, e tambem para auxiliar os devs que buscam ajuda na documentação.
 
-## Installation
+Caso necessite algum ajuste ou informação adicional, não hesite em entrar em contato comigo. Estou à disposição para ajudar no que for necessário!
 
-```bash
-$ npm install
-```
+## Doc Swagger
 
-## Running the app
+<img src="public/swagger doc.png">
+<img src="public/swagger doc2.png">
+<img src="public/schema swagger.png">
+<img src="public/schema swagger2.png">
 
-```bash
-# development
-$ npm run start
+## 🛠️ Tecnologias
 
-# watch mode
-$ npm run start:dev
+📁 **Back-end**
 
-# production mode
-$ npm run start:prod
-```
+- [Nest.js](https://docs.nestjs.com/): Optei por usar o Nest.js como framework para o back-end devido à sua arquitetura de modulos e baseada em conceitos sólidos. A estrutura orientada a módulos e a integração com TypeScript possibilitam uma estrutura sólida para o desenvolvimento, facilitando a manutenção e escalabilidade do código.
 
-## Test
+- [MongoDB](https://www.mongodb.com/pt-br): Escolhi MongoDB para o banco de dados por conta do seu modelo de dados flexivel, e por conta de sua facilidade com integração em diferentes linguagens de progamação.
 
-```bash
-# unit tests
-$ npm run test
+- [Mongoose](https://mongoosejs.com/): O mongoose foi escolhido para fazer a conexão com o banco de dados e sua facilidade em fazer isso.
 
-# e2e tests
-$ npm run test:e2e
+- [Prisma](https://www.prisma.io/): Utilizei o prisma como ORM, que facilita muito a interação com o banco de dados fazendo tarefas como criar e atualizar coisas no banco serem muito mais simples de serem realizadas.
 
-# test coverage
-$ npm run test:cov
-```
+🔋 **Controle de versão e deploy**
 
-## Support
+- [Git](https://git-scm.com) Utilizei Git para controle de versionamento, o que facilita o trabalho colaborativo e o acompanhamento das alterações no código.
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+- [Vercel](https://vercel.com/) A escolha da Vercel para deploy foi feita devido à sua integração fácil com repositórios Git e sua eficiência no deployment de aplicações.
 
-## Stay in touch
+⚙️ **Configuranções e Instalações**
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+Clone do Projeto
 
-## License
+    $ git clone https://github.com/Faelkk/mycontacts-api
 
-Nest is [MIT licensed](LICENSE).
+Instalando as dependências
+
+    $ npm install
+
+Iniciando o projeto
+
+    $ npm run dev
+
+<br>
+
+**Como me ajudar nesse projeto?**
+
+- Você ira me ajudar muito me seguindo aqui no GitHub
+- Dando uma estrela no projeto
+- Conectando-se comigo no LinkedIn para fazer parte da minha rede.
+
+<br>
+
+**Feito por**
+[Rafael Achtenberg](linkedin.com/in/rafael-achtenberg-7a4b12284/)
